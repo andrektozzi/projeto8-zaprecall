@@ -1,12 +1,15 @@
 import React from 'react';
 
 export default function Home() {
+
+    const [escondido, setEscondido] = React.useState(false)
+
     return (
-        <div className="tela-inicial">
+        <div className={escondido ? "escondido" : "tela-inicial"}>
             <div>
-                <img src="images/logo.png" />
+                <img src="images/logo.png" alt="logo"/>
                 <h1>ZapRecall</h1>
-                <button>Iniciar Recall!</button>
+                <button onClick={() => setEscondido(!escondido)}>Iniciar Recall!</button>
             </div>
         </div>
     )
