@@ -1,16 +1,15 @@
 import React from 'react';
+import logo from "./assets/images/logo.png"
 
-export default function Home() {
-
-    const [escondido, setEscondido] = React.useState(false)
+export default function Home({setVisible}){
 
     return (
-        <div className={escondido ? "escondido" : "tela-inicial"}>
-            <div>
-                <img src="images/logo.png" alt="logo"/>
-                <h1>ZapRecall</h1>
-                <button onClick={() => setEscondido(!escondido)}>Iniciar Recall!</button>
+        <>
+            <div className="containerStart">
+                <img className="logoStart" src={logo} alt="logo"></img>
+                <h1> Zap Recall</h1>
+                <button className="buttonStart" onClick={() => setVisible(false)}> Iniciar Recall!</button>
             </div>
-        </div>
-    )
+        </> 
+    );
 }

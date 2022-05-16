@@ -1,13 +1,18 @@
+import React from "react";
+
 import Home from "./Components/Home";
 import Content from "./Components/Content"
-import Footer from "./Components/Footer"
 
-export default function App () {
+import "./Components/assets/reset.css";
+import "./Components/assets/style.css";
+
+export default function App(){
+
+    const [visible, setVisible] = React.useState(true);
+
     return (
         <>
-            <Home />
-            <Content />
-            <Footer />
+        {visible ? <Home setVisible={setVisible} /> : <Content />}
         </>
-    )
+    );
 }

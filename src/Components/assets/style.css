@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+.containerStart{
+    background-color:#FB6B6B;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+    position: absolute;
+}
+
+img .logoStart{
+    width: 136px;
+    height: 161px;
+}
+
+.containerStart h1{
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 13px;
+    margin-bottom: 30px;
+}
+
+.buttonStart{
+    width: 246px;
+    height: 54px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Recursive', sans-serif;
+    color:#D70900;
+    background-color: #FFFFFF;
+    border:1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+
+.containerGame{
+    background-color:#FB6B6B;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:0;
+    position: absolute;
+    overflow-y: scroll;
+    padding-top: 50px;
+    padding-bottom: 130px;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 51px;
+}
+
+.top h1{
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.logoGame{
+    width: 52px;
+    height: 60px;
+}
+
+.footer{
+    width: 100%;
+    min-height: 70px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Flashcard */
+.flashcard{
+    width: 300px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family:'Recursive', sans-serif;
+    font-weight: 700;
+    font-size:16px;
+    color: #333333;
+    margin-bottom: 25px;
+    padding: 23px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.flashcard ion-icon{
+    font-size: 25px;
+    color:#333333;
+}
+
+
+.question, .answers{
+    width: 300px;
+    background-color: #FFFFD4;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family:'Recursive', normal;
+    font-weight: 400;
+    font-size:18px;
+    color: #333333;
+    margin-bottom: 25px;
+    padding:18px 15px 91px 15px;
+    position: relative;
+}
+
+.question ion-icon{
+    position: absolute;
+    bottom: 8px;
+    right:8px;
+    font-size: 25px;
+    color:#333333;
+    cursor: pointer;
+}
+
+/* Answers */
+.buttonsAnswer{
+   width: 270px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   position: absolute;
+   bottom:8px;
+}
+
+.buttonsAnswer button{
+    width: 85px;
+    height: 37px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Recursive', sans-serif;
+    color:#ffffff;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+} 
+
+button.wrong {
+    background-color: #ff3030;
+}
+
+button.almost {
+    background-color: #ff922e;
+}
+
+button.right {
+    background-color: #2fbe34;
+}
+
+.wrong{
+    text-decoration: line-through;
+    color:#ff3030;
+}
+
+.almost{
+    text-decoration: line-through;
+    color: #ff922e;
+}
+
+.right{
+    text-decoration: line-through;
+    color:#2fbe34;
+}
+
+.flashcard.wrong ion-icon{
+    font-size: 25px;
+    color:#ff3030;
+}
+
+.flashcard.almost ion-icon{
+    font-size: 25px;
+    color:#ff922e;
+}
+
+.flashcard.right ion-icon{
+    font-size: 25px;
+    color:#2fbe34;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 10px;
+}
+
+.footer p{
+    max-width: 222px;
+    text-align: center;
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.footer p:first-child{
+    font-weight: 700;
+}
+
+.footer p:nth-child(2){
+    margin: 14px auto;
+}
+
+.iconResults{
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+}

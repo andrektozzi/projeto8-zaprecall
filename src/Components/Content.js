@@ -1,19 +1,24 @@
-import React from 'react';
-import Questions from './Questions';
+import React from "react";
 
-export default function Content() {
+import Footer from "./Footer";
+import Questions from "./Questions";
+
+import logo from "./assets/images/logo.png"
+
+export default function Content(){
+    const [arrayStats, setArrayStats] = React.useState([]);
+    const [arrayResult, setArrayResult] = React.useState([]);    
+
     return (
-        <div className="tela-flashcards">
-            <div className="header">
-                <img src="images/logo.png" />
-                <h2>ZapRecall</h2>
-            </div>
-
-            <div className="container-flashcards">
-                <div className="flashcards">
-                    <Questions />
+        <>
+            <div className="containerGame">
+                <div className="top">
+                    <img className="logoGame" src={logo} alt="logo"></img>
+                    <h1> Zap Recall</h1>
                 </div>
+                <Questions arrayStats={arrayStats} setArrayStats={setArrayStats} arrayResult={arrayResult} setArrayResult={setArrayResult}/>
+                <Footer arrayStats={arrayStats} setArrayStats={setArrayStats} arrayResult={arrayResult} setArrayResult={setArrayResult}/>
             </div>
-        </div>
-    )
+        </> 
+    );
 }
